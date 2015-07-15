@@ -1,0 +1,650 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"val",
+				"validatePresenceOf"
+			],
+			[
+				"use",
+				"useRealName"
+			],
+			[
+				"Usr",
+				"UserSchema"
+			],
+			[
+				"up",
+				"updateAvailableImgSources"
+			],
+			[
+				"a",
+				"availableImgSources"
+			],
+			[
+				"lo",
+				"locationData"
+			],
+			[
+				"get",
+				"getCurrentUser"
+			],
+			[
+				"$root",
+				"$rootScope	AngularJS"
+			],
+			[
+				"passW",
+				"passwordChange"
+			],
+			[
+				"ng-b",
+				"ng-bind-html	AngularJS"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"Journey",
+				"Journey"
+			],
+			[
+				"cre",
+				"createdBy"
+			],
+			[
+				"jou",
+				"journeyData"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"journey",
+				"journeyData"
+			],
+			[
+				"comment",
+				"commentBy"
+			],
+			[
+				"pan",
+				"panel-default"
+			],
+			[
+				"new",
+				"newCommentText"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"panel",
+				"panel-body"
+			],
+			[
+				"col-l",
+				"col-lg-6"
+			],
+			[
+				"startM",
+				"startMap"
+			],
+			[
+				"LatL",
+				"latLng"
+			],
+			[
+				"map",
+				"mapModel"
+			],
+			[
+				"tot",
+				"totalRating"
+			],
+			[
+				"start",
+				"startMarker"
+			],
+			[
+				"star",
+				"startMarker"
+			],
+			[
+				"end",
+				"endMap"
+			],
+			[
+				"sta",
+				"startMarker"
+			],
+			[
+				"lon",
+				"longitude"
+			],
+			[
+				"lat",
+				"latitude"
+			],
+			[
+				"all",
+				"allMethods"
+			],
+			[
+				"foo",
+				"fontawesome"
+			],
+			[
+				"transport",
+				"transportationMethod"
+			],
+			[
+				"tr",
+				"transportationAndRatings"
+			],
+			[
+				"m",
+				"matchesCurrentMethodID"
+			],
+			[
+				"ind",
+				"indexOf"
+			],
+			[
+				"transportation",
+				"transportationAndRating"
+			],
+			[
+				"col-",
+				"col-lg-2"
+			],
+			[
+				"c",
+				"col-lg-4"
+			],
+			[
+				"trans",
+				"transportationMethod"
+			],
+			[
+				"gl",
+				"glyphicons-star-empty"
+			],
+			[
+				"transportatio",
+				"transportationAndRating"
+			],
+			[
+				"form-",
+				"form-group"
+			],
+			[
+				"tran",
+				"transportationAndRating"
+			],
+			[
+				"angular-",
+				"angular-bootstrap"
+			],
+			[
+				"b",
+				"btn-primary"
+			],
+			[
+				"form",
+				"form-group"
+			],
+			[
+				"passw",
+				"passwordRetype"
+			],
+			[
+				"col-lg-",
+				"col-lg-offset-4"
+			],
+			[
+				"auth",
+				"authenticate"
+			],
+			[
+				"failure",
+				"failureFlash"
+			],
+			[
+				"fai",
+				"failureRedirect"
+			],
+			[
+				"succ",
+				"successRedirect"
+			],
+			[
+				"url",
+				"urlRouterProvider"
+			],
+			[
+				"add",
+				"addJourney"
+			],
+			[
+				"ur",
+				"urlRouterProvider"
+			],
+			[
+				"find",
+				"findOrCreateUser"
+			],
+			[
+				"fo",
+				"formData"
+			],
+			[
+				"logo",
+				"logoSize"
+			],
+			[
+				"nav",
+				"navbar"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"t",
+				"toTravel"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"fun",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "menu",
+		"selected_items":
+		[
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"close ",
+				"Project: Close"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"closa",
+				"File: Close All"
+			],
+			[
+				"prefe",
+				"Preferences: Alignment File Settings – User"
+			],
+			[
+				"a",
+				"Preferences: Alignment Key Bindings – User"
+			],
+			[
+				"al",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"align",
+				"Preferences: Alignment File Settings – Default"
+			],
+			[
+				"prefere",
+				"Preferences: Alignment File Settings – User"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pre",
+				"Preferences: Settings - Default"
+			],
+			[
+				"prefer",
+				"Preferences: Settings - User"
+			],
+			[
+				"search",
+				"File: Search Files"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/alex/Projects/WhatShouldIBake"
+	],
+	"file_history":
+	[
+		"/home/alex/Projects/ToTravel/package.json",
+		"/home/alex/Projects/ToTravel/server/api/journey/journey.model.js",
+		"/home/alex/Projects/ToTravel/server/api/user/user.model.js",
+		"/home/alex/Projects/ToTravel/client/app/account/settings/settings.controller.js",
+		"/home/alex/Projects/ToTravel/client/app/account/settings/settings.jade",
+		"/home/alex/Projects/ToTravel/client/app/app.scss",
+		"/home/alex/Projects/ToTravel/client/components/locationData/locationData.service.spec.js",
+		"/home/alex/Projects/ToTravel/TODO",
+		"/home/alex/Projects/ToTravel/server/api/journey/journey.spec.js",
+		"/home/alex/Projects/ToTravel/karma.conf.js",
+		"/home/alex/Projects/ToTravel/client/app/journey/journey.scss",
+		"/home/alex/Projects/ToTravel/client/app/journey/journey.jade",
+		"/home/alex/Projects/ToTravel/client/components/locationData/locationData.service.js",
+		"/home/alex/Projects/ToTravel/client/components/navbar/navbar.controller.js",
+		"/home/alex/Projects/ToTravel/client/components/auth/auth.service.js",
+		"/home/alex/Projects/ToTravel/client/components/auth/user.service.js",
+		"/home/alex/Projects/ToTravel/server/api/user/index.js",
+		"/home/alex/Projects/ToTravel/server/api/user/user.controller.js",
+		"/home/alex/Projects/ToTravel/client/app/journey/journey.controller.js",
+		"/home/alex/Projects/ToTravel/client/app/journeyFactory/journeyFactory.service.js",
+		"/home/alex/Projects/ToTravel/client/app/addJourney/addJourney.controller.js",
+		"/home/alex/Projects/ToTravel/server/api/journey/journey.controller.js",
+		"/home/alex/Projects/ToTravel/client/app/addJourney/addJourney.jade",
+		"/home/alex/Projects/ToTravel/client/app/addJourney/addJourney.scss",
+		"/home/alex/Projects/ToTravel/client/app/main/main.controller.js",
+		"/home/alex/Projects/ToTravel/client/app/main/main.jade",
+		"/home/alex/Projects/ToTravel/client/app/journey/journey.js",
+		"/home/alex/Projects/ToTravel/client/app/app.js",
+		"/home/alex/Projects/ToTravel/client/app/journeyFactory/journeyFactory.service.spec.js",
+		"/home/alex/Projects/ToTravel/client/app/credits/credits.controller.spec.js",
+		"/home/alex/Projects/ToTravel/client/app/addJourney/addJourney.controller.spec.js",
+		"/home/alex/Projects/ToTravel/client/app/compareTo/compareTo.directive.spec.js",
+		"/home/alex/Projects/ToTravel/bower.json",
+		"/home/alex/Projects/ToTravel/client/app/availableMethodsFilter/availableMethodsFilter.filter.spec.js",
+		"/home/alex/Projects/ToTravel/client/app/credits/credits.jade",
+		"/home/alex/Projects/ToTravel/client/components/footer/footer.controller.js",
+		"/home/alex/Projects/ToTravel/client/components/footer/footer.jade",
+		"/home/alex/Projects/ToTravel/client/app/admin/admin.jade",
+		"/home/alex/Projects/ToTravel/client/components/footer/footer.scss",
+		"/home/alex/Projects/ToTravel/client/index.html",
+		"/home/alex/Projects/ToTravel/server/app.js",
+		"/home/alex/Projects/ToTravel/server/api/auth-test.helper.js",
+		"/home/alex/Projects/ToTravel/server/api/mock-user.js",
+		"/home/alex/Projects/ToTravel/client/app/account/signup/signup.jade",
+		"/home/alex/Projects/ToTravel/client/app/account/login/login.jade",
+		"/home/alex/Projects/ToTravel/client/app/availableMethodsFilter/availableMethodsFilter.filter.js",
+		"/home/alex/Projects/ToTravel/client/components/navbar/navbar.scss",
+		"/home/alex/Projects/ToTravel/ToTravel.sublime-project",
+		"/home/alex/Projects/ToTravel/client/app/compareTo/compareTo.directive.js",
+		"/home/alex/Projects/ToTravel/server/api/user/user.model.spec.js",
+		"/home/alex/Projects/ToTravel/client/app/addJourney/addJourney.js",
+		"/home/alex/Projects/ToTravel/server/api/journey/index.js",
+		"/home/alex/Projects/ToTravel/client/app/main/main.controller.spec.js",
+		"/home/alex/Projects/ToTravel/server/routes.js",
+		"/home/alex/Projects/ToTravel/server/config/seed.js",
+		"/home/alex/Projects/ToTravel/client/app/main/main.scss",
+		"/home/alex/Projects/ToTravel/client/components/navbar/navbar.jade",
+		"/home/alex/Projects/ToTravel-old/sass/style.scss",
+		"/home/alex/Projects/ToTravel/server/config/environment/development.js",
+		"/home/alex/Projects/ToTravel/README.md",
+		"/home/alex/Projects/ToTravel/server/views/_layouts/static.jade",
+		"/home/alex/Projects/ToTravel/server/views/_layouts/default.jade",
+		"/home/alex/Projects/ToTravel/server/views/home/express.jade",
+		"/home/alex/Projects/ToTravel/server/views/home/index.jade",
+		"/home/alex/Projects/ToTravel/server/views/home/page.jade",
+		"/home/alex/Projects/ToTravel/server/views/empty.jade",
+		"/home/alex/Projects/ToTravel/server/views/status/index.jade",
+		"/home/alex/Projects/ToTravel/public/js/core.js",
+		"/home/alex/Projects/ToTravel/public/js/appRoutes.js",
+		"/home/alex/Projects/ToTravel/app/models/journey.js",
+		"/home/alex/Projects/ToTravel/public/js/controllers/userControllers.js",
+		"/home/alex/Projects/ToTravel/public/js/controllers/journeyControllers.js",
+		"/home/alex/Projects/ToTravel/public/js/services/usersService.js",
+		"/home/alex/Projects/ToTravel/public/partials/signup.jade",
+		"/home/alex/Projects/ToTravel/public/partials/login.jade",
+		"/home/alex/Projects/ToTravel/public/layout.jade",
+		"/home/alex/Projects/ToTravel/public/index.jade",
+		"/home/alex/Projects/ToTravel/routes/index.js",
+		"/home/alex/Projects/ToTravel/app/routes.js",
+		"/home/alex/Projects/ToTravel/server.js",
+		"/home/alex/Projects/ToTravel/config/passport.js",
+		"/home/alex/Projects/ToTravel/public/partials/addJourney.jade",
+		"/home/alex/Projects/ToTravel/public/partials/myJourneys.jade",
+		"/home/alex/Projects/ToTravel/app/models/user.js",
+		"/home/alex/Projects/ToTravel/sass/style.scss",
+		"/home/alex/Projects/ToTravel/public/js/directives/showErrors.js",
+		"/home/alex/Projects/ToTravel/public/js/controllers/controllers.js",
+		"/home/alex/Projects/ToTravel/public/js/services/journeysService.js",
+		"/home/alex/style.css.old",
+		"/home/alex/Projects/ToTravel/public/js/services/journeys.js",
+		"/home/alex/Projects/ToTravel/public/partials/index.jade",
+		"/home/alex/Projects/ToTravel/public/style.css",
+		"/home/alex/.config/sublime-text-3/Packages/User/Base File.sublime-settings",
+		"/home/alex/Projects/ToTravel/public/js/controllers/mainxxxxx.js",
+		"/home/alex/.config/sublime-text-3/Packages/Terminal/Base File.sublime-settings",
+		"/home/alex/.config/sublime-text-3/Packages/Alignment/Default (Linux).sublime-keymap",
+		"/home/alex/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/alex/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/alex/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/alex/Projects/ToTravel/public/js/controllers/main.js",
+		"/home/alex/Projects/ToTravel/config/database.js",
+		"/home/alex/Projects/ToTravel/public/index.html",
+		"/home/alex/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/alex/.config/sublime-text-3/Packages/SublimeLinter/SublimeLinter.sublime-settings"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 92.0,
+		"where_history":
+		[
+			"<open folders>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"lodash",
+			"getcurrentuser",
+			"mocha",
+			"addjourney.controller",
+			"thing",
+			"jade",
+			".hbs",
+			"scripts",
+			"hbs",
+			"view engine",
+			"/api/signup",
+			"journeyService",
+			"formData",
+			"main.js",
+			"    | &#x9;\n    "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"    "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 316.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 102.0
+	},
+	"pinned_build_system": "",
+	"project": "WhatShouldIBake.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 895.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 384.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
