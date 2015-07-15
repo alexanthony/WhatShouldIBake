@@ -16,7 +16,7 @@
     "jade": "~1.2.0",
     "mongoose": "~3.8.8",
     "composable-middleware": "^0.3.0",
-    "connect-mongo": "^0.4.1"
+    "connect-mongo": "^0.8.2"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
