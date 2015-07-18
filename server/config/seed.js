@@ -42,5 +42,13 @@ Recipe.find({}).remove(function() {
     sweet: false,
     gluten: true,
     plural: false
+  },
+  {
+    name: 'Carrot Cake',
+    link: 'http://www.bbcgoodfood.com/recipes/1658634/glutenfree-carrot-cake',
+    img: 'http://www.bbcgoodfood.com/sites/bbcgoodfood.com/files/recipe_images/recipe-image-legacy-id--1201555_11.jpg',
+    sweet: true,
+    gluten: false,
+    plural: false
   });
 });

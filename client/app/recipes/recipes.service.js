@@ -7,5 +7,7 @@ angular.module('whatShouldIbakeApp')
 
 
     // Public API here
-    return $resource('/api/recipes');
+    return $resource('/api/recipes', {
+      glutenfree : false
+    });
   });

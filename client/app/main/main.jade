@@ -11,7 +11,7 @@ header#banner.hero-unit
     a(ng-click='nextRecipe()', href='').col-lg-12.big-link {{rude ? 'That looks shit' : 'Show me something else'}}
   .row
     a(href='', ng-click='toggleSweetSavoury()').col-lg-6.link Something{{rude ? ' fucking' : ''}} {{recipe().sweet ? 'savoury' : 'sweet'}}
-    a(href='').col-lg-6.link {{rude ? 'No fucking gluten' : 'Something without gluten'}}
+    a(href='', ng-click='toggleGlutenFree()').col-lg-6.link {{glutenFree ? (rude ? 'Give me fucking gluten' : 'Gluten is OK') : (rude ? 'No fucking gluten' : 'Something without gluten')}}
 
 
 footer.footer

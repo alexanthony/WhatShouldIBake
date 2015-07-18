@@ -3,12 +3,15 @@
 angular.module('whatShouldIbakeApp')
   .controller('MainCtrl', function ($scope, $http, recipes) {
     var getRecipes = function() {
-      recipes.query(function(data) {
+      recipes.query({
+        glutenfree : $scope.glutenFree
+      }, function(data) {
         $scope.recipes = data;
       });
     };
 
     $scope.recipes = [];
+    $scope.glutenFree = false;
 
     getRecipes();
 
@@ -36,6 +39,12 @@ angular.module('whatShouldIbakeApp')
 
     $scope.toggleSweetSavoury = function() {
       $scope.sweetSavoury = !$scope.recipe().sweet;
+      getRecipes();
+      recipeNumber = 0;
+    };
+
+    $scope.toggleGlutenFree = function() {
+      $scope.glutenFree = !$scope.glutenFree;
       getRecipes();
       recipeNumber = 0;
     };
