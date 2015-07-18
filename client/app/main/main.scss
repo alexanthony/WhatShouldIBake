@@ -24,7 +24,38 @@
 
 .footer {
     text-align: center;
-    padding: 30px 0;
-    margin-top: 70px;
+    padding: 5px 0;
+    margin-top: 30px;
     border-top: 1px solid #E5E5E5;
+}
+
+.header-link {
+    @extend a;
+    color: #ffffff;
+    &:hover {
+        color: #ffffff;
+    }
+    &:focus {
+        color: #ffffff;
+    }
+}
+
+.link {
+    color: #000;
+    text-align: center;
+    font-size: 40px;
+    &:hover {
+        color: #000;
+    }
+}
+
+.big-link {
+    @extend .link;
+    font-size: 60px;
+}
+
+.little-link {
+    @extend .link;
+    font-size: 28px;
+    margin-top: 20px;
 }
