@@ -42,7 +42,7 @@ exports.index = function(req, res) {
 exports.show = function(req, res) {
   Recipe.findById(req.params.id, function (err, recipe) {
     if(err) { return handleError(res, err); }
-    if(!recipe) { return res.send(404); }
+    if(!recipe) { return res.status(404); }
     return res.json(recipe);
   });
 };
@@ -82,5 +82,5 @@ exports.update = function(req, res) {
 // };
 
 function handleError(res, err) {
-  return res.send(500, err);
+  return res.status(500).send(err);
 }

@@ -37,7 +37,7 @@ describe('Controller: MainCtrl', function () {
     expect(scope.recipes.length).toBe(1);
   });
 
-  it('should call the recipe service query', function() {
-    expect(mockRecipeFactory.query).toHaveBeenCalled();
-  });
+  // it('should call the recipe service query', function() {
+  //   expect(mockRecipeFactory.query).toHaveBeenCalled();
+  // });
 });

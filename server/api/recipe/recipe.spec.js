@@ -34,7 +34,7 @@ describe('GET /api/recipes', function() {
       });
   });
 
-    it('should only include savoury recipes when query asks for it', function(done) {
+  it('should only include savoury recipes when query asks for it', function(done) {
     request(app)
       .get('/api/recipes')
       .query({sweet: false})
@@ -48,5 +48,30 @@ describe('GET /api/recipes', function() {
         }
         done();
       });
+  });
+
+  it('should return 1 recipe when an id is supplied', function(done) {
+    var recipeId;
+    request(app)
+      .get('/api/recipes')
+      .expect(200)
+      .expect('Content-Type', /json/)
+      .end(function(err, res) {
+        if (err) return done(err);
+        console.log(res.body[0]);
+        recipeId = res.body[0]._id;
+
+        request(app)
+          .get('/api/recipes/'+recipeId)
+          .expect(200)
+          .expect('Content-Type', /json/)
+          .end(function(err, res) {
+            if (err) return done(err);
+            res.body.should.be.instanceof(Object);
+            res.body._id.should.be.exactly(recipeId);
+          });
+         });
+        done();
+
   });
 });
