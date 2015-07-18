@@ -34,5 +34,13 @@ Recipe.find({}).remove(function() {
     sweet: true,
     gluten: true,
     plural: false
+  },
+  {
+    name : 'Bacon and Cheese Bread',
+    link : 'http://www.browneyedbaker.com/bacon-and-cheese-easter-bread/',
+    img  : 'http://www.browneyedbaker.com/wp-content/uploads/2012/04/bacon-cheese-bread-1-550.jpg',
+    sweet: false,
+    gluten: true,
+    plural: false
   });
 });

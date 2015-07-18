@@ -34,5 +34,10 @@ angular.module('whatShouldIbakeApp')
       }
     };
 
+    $scope.toggleSweetSavoury = function() {
+      getRecipes();
+      recipeNumber = 0;
+    };
+
     $scope.rude = true;
   });
