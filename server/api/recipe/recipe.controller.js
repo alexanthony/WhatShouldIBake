@@ -12,6 +12,10 @@
 var _ = require('lodash');
 var Recipe = require('./recipe.model');
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 // Get list of recipes
 exports.index = function(req, res) {
   console.log(req.query);
@@ -41,7 +45,15 @@ exports.index = function(req, res) {
   }
   query.exec(function (err, recipes) {
     if(err) { return handleError(res, err); }
-    return res.status(200).json(recipes);
+    var result = [];
+    if (req.query.maxresults && req.query.maxresults < recipes.length) {
+      while (result.length < req.query.maxresults) {
+        var recipeToAddIndex = getRandomInt(0, recipes.length - 1);
+        result.push(recipes[recipeToAddIndex]);
+        recipes.splice(recipeToAddIndex, 1);
+      }
+    } else {result = recipes}
+    return res.status(200).json(result);
   });
 };
 

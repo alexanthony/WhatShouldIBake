@@ -66,6 +66,19 @@ describe('GET /api/recipes', function() {
       });
   });
 
+  it('should not return more than maxresults when specified', function(done) {
+    request(app)
+      .get('/api/recipes')
+      .query({maxresults: 2})
+      .expect(200)
+      .expect('Content-Type', /json/)
+      .end(function(err, res) {
+        if (err) return done(err);
+        res.body.length.should.not.be.above(2);
+        done();
+      });
+  });
+
 
   it('should return 1 recipe when an id is supplied', function(done) {
     var recipeId;

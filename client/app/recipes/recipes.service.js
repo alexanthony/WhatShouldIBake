@@ -8,6 +8,7 @@ angular.module('whatShouldIbakeApp')
 
     // Public API here
     return $resource('/api/recipes', {
-      glutenfree : false
+      glutenfree : false,
+      maxresults : 20
     });
   });
