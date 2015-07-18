@@ -17,7 +17,8 @@ module.exports = function (grunt) {
     cdnify: 'grunt-google-cdn',
     protractor: 'grunt-protractor-runner',
     injector: 'grunt-asset-injector',
-    buildcontrol: 'grunt-build-control'
+    buildcontrol: 'grunt-build-control',
+    istanbul_check_coverage: 'grunt-mocha-istanbul'
   });
 
   // Time how long tasks take. Can help when optimizing build times
@@ -31,7 +32,8 @@ module.exports = function (grunt) {
     yeoman: {
       // configurable paths
       client: require('./bower.json').appPath || 'client',
-      dist: 'dist'
+      dist: 'dist',
+      coverage: 'coverage'
     },
     express: {
       options: {
@@ -169,6 +171,18 @@ module.exports = function (grunt) {
             '!<%= yeoman.dist %>/.git*',
             '!<%= yeoman.dist %>/.openshift',
             '!<%= yeoman.dist %>/Procfile'
+          ]
+        }]
+      },
+      coverage: {
+        files: [{
+          dot: true,
+          src: [
+            '.tmp',
+            '<%= yeoman.coverage %>/*',
+            '!<%= yeoman.coverage %>/.git*',
+            '!<%= yeoman.coverage %>/.openshift',
+            '!<%= yeoman.coverage %>/Procfile'
           ]
         }]
       },
@@ -377,6 +391,34 @@ module.exports = function (grunt) {
           ]
         }]
       },
+      coverage: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.client %>',
+          dest: '<%= yeoman.coverage %>/public',
+          src: [
+            '*.{ico,png,txt}',
+            '.htaccess',
+            'bower_components/**/*',
+            'assets/images/{,*/}*.{webp}',
+            'assets/fonts/**/*',
+            'index.html'
+          ]
+        }, {
+          expand: true,
+          cwd: '.tmp/images',
+          dest: '<%= yeoman.coverage %>/public/assets/images',
+          src: ['generated/*']
+        }, {
+          expand: true,
+          dest: '<%= yeoman.coverage %>',
+          src: [
+            'package.json',
+            'server/**/*'
+          ]
+        }]
+      },
       styles: {
         expand: true,
         cwd: '<%= yeoman.client %>',
@@ -449,6 +491,32 @@ module.exports = function (grunt) {
       src: ['server/**/*.spec.js']
     },
 
+    mocha_istanbul: {
+      unit: {
+        options: {
+          excludes: ['**/*.{spec,mock,integration}.js'],
+          reporter: 'spec',
+          mask: '**/*.spec.js',
+          coverageFolder: 'coverage/server/unit'
+        },
+        src: 'server'
+      }
+    },
+
+    istanbul_check_coverage: {
+      default: {
+        options: {
+          coverageFolder: 'coverage/**',
+          check: {
+            lines: 20,
+            statements: 20,
+            branches: 20,
+            functions: 20
+          }
+        }
+      }
+    },
+
     protractor: {
       options: {
         configFile: 'protractor.conf.js'
@@ -469,7 +537,33 @@ module.exports = function (grunt) {
       prod: {
         NODE_ENV: 'production'
       },
+      coverage: {
+        APP_DIR_FOR_CODE_COVERAGE: '../coverage/instrument/app/'
+      },
       all: localConfig
+    },
+
+    instrument: {
+      files: 'app/*.js',
+      options: {
+        lazy: true,
+        basePath: 'coverage/instrument/'
+      }
+    },
+
+    storeCoverage: {
+      options: {
+        dir: 'coverage/reports'
+      }
+    },
+
+    makeReport: {
+      src: 'coverage/reports/**/*.json',
+      options: {
+        type: 'lcov',
+        dir: 'test/coverage/reports',
+        print: 'detail'
+      }
     },
 
     // Compiles Jade to html
@@ -693,4 +787,12 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('coverage', grunt.task.run([
+          'env:all',
+          'env:test',
+          'mocha_istanbul',
+          'istanbul_check_coverage'
+        ])
+  );
 };

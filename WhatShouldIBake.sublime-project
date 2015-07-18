@@ -6,6 +6,7 @@
       "folder_exclude_patterns":[
   "node_modules",
   "/home/alex/Projects/WhatShouldIBake/dist",
+  "/home/alex/Projects/WhatShouldIBake/coverage",
   ".tmp",
   "npm-debug.log",
   ".sass-cache"
