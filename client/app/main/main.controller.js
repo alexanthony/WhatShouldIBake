@@ -3,9 +3,13 @@
 angular.module('whatShouldIbakeApp')
   .controller('MainCtrl', function ($scope, $http, recipes) {
     var getRecipes = function() {
-      recipes.query({
-        glutenfree : $scope.glutenFree
-      }, function(data) {
+      var recipeOptions = {glutenfree : $scope.glutenFree};
+      if ($scope.sweetSavoury === true) {
+        recipeOptions.sweet = true;
+      } else if ($scope.sweetSavoury === false) {
+        recipeOptions.sweet = false;
+      }
+      recipes.query(recipeOptions, function(data) {
         $scope.recipes = data;
       });
     };
