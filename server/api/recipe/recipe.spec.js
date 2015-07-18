@@ -50,6 +50,23 @@ describe('GET /api/recipes', function() {
       });
   });
 
+  it('should only include gluten free recipes when asked for them', function(done) {
+    request(app)
+      .get('/api/recipes')
+      .query({glutenfree: true})
+      .expect(200)
+      .expect('Content-Type', /json/)
+      .end(function(err, res) {
+        if (err) return done(err);
+        var recipes = res.body;
+        for (var i = 0; i < recipes.length; i++) {
+          recipes[i].gluten.should.be.exactly(false);
+        }
+        done();
+      });
+  });
+
+
   it('should return 1 recipe when an id is supplied', function(done) {
     var recipeId;
     request(app)

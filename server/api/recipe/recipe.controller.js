@@ -17,6 +17,7 @@ exports.index = function(req, res) {
   console.log(req.query);
   var sweetOnly = false;
   var savouryOnly = false;
+  var glutenFree = false;
   if (req.query.sweet === 'true') {
     sweetOnly = true;
   } else if (req.query.sweet === 'false') {
@@ -25,12 +26,18 @@ exports.index = function(req, res) {
   if (sweetOnly && savouryOnly) {
     return handleError(res, 'Cannot be both sweet only and savoury only');
   }
+  if (req.query.glutenfree === 'true') {
+    glutenFree = true;
+  }
 
   var query = Recipe.find()
   if (sweetOnly) {
     query.where('sweet').equals(true);
   } else if (savouryOnly) {
     query.where('sweet').equals(false);
+  }
+  if (glutenFree) {
+    query.where('gluten').equals(false);
   }
   query.exec(function (err, recipes) {
     if(err) { return handleError(res, err); }
