@@ -21,6 +21,6 @@ footer.footer
       = ' | '
       | Alex Anthony
       = ' | '
-      a.little-link The link doesn't{{rude ? ' fucking' : ''}} work
+      a(href='', ng-click='markAsBroken()').little-link The link doesn't{{rude ? ' fucking' : ''}} work
       = ' | '
       a(ng-click='toggleRude()').little-link Be {{rude ? 'more polite' : 'ruder'}}

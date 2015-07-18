@@ -7,8 +7,12 @@ angular.module('whatShouldIbakeApp')
 
 
     // Public API here
-    return $resource('/api/recipes', {
-      glutenfree : false,
-      maxresults : 20
-    });
+    return $resource('/api/recipes/:id/:controller', {},
+    {markAsBroken: {
+      method : 'PUT',
+      params: {
+        id : '@_id',
+        controller : 'broken'
+      }
+    }});
   });

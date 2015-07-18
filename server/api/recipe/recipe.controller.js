@@ -43,6 +43,7 @@ exports.index = function(req, res) {
   if (glutenFree) {
     query.where('gluten').equals(false);
   }
+  query.where('investigateBreakage').equals(false);
   query.exec(function (err, recipes) {
     if(err) { return handleError(res, err); }
     var result = [];
@@ -75,18 +76,18 @@ exports.show = function(req, res) {
 // };
 
 // Updates an existing recipe in the DB.
-exports.update = function(req, res) {
-  if(req.body._id) { delete req.body._id; }
-  Recipe.findById(req.params.id, function (err, recipe) {
-    if (err) { return handleError(res, err); }
-    if(!recipe) { return res.send(404); }
-    var updated = _.merge(recipe, req.body);
-    updated.save(function (err) {
-      if (err) { return handleError(res, err); }
-      return res.status(200).json(recipe);
-    });
-  });
-};
+// exports.update = function(req, res) {
+//   if(req.body._id) { delete req.body._id; }
+//   Recipe.findById(req.params.id, function (err, recipe) {
+//     if (err) { return handleError(res, err); }
+//     if(!recipe) { return res.send(404); }
+//     var updated = _.merge(recipe, req.body);
+//     updated.save(function (err) {
+//       if (err) { return handleError(res, err); }
+//       return res.status(200).json(recipe);
+//     });
+//   });
+// };
 
 // // Deletes a recipe from the DB.
 // exports.destroy = function(req, res) {
@@ -99,6 +100,18 @@ exports.update = function(req, res) {
 //     });
 //   });
 // };
+exports.markAsBroken = function(req, res, next) {
+  var id = req.params.id;
+  Recipe.findById(id, function(err, recipe) {
+    if (err) { return handleError(res, err); }
+    if(!recipe) { return res.send(404); }
+    recipe.investigateBreakage = true;
+    recipe.save(function (err) {
+      if (err) { return handleError(res, err); }
+      return res.status(200).json(recipe);
+    });
+  });
+};
 
 function handleError(res, err) {
   return res.status(500).send(err);

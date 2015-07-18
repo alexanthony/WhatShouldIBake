@@ -25,7 +25,8 @@ Recipe.find({}).remove(function() {
     img  : 'http://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/richchocolatebrownie_1933_16x9.jpg',
     sweet: true,
     gluten: true,
-    plural: true
+    plural: true,
+    investigateBreakage: false
   },
   {
     name : 'Victoria Sandwich',
@@ -33,7 +34,8 @@ Recipe.find({}).remove(function() {
     img  : 'http://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/mary_berrys_perfect_34317_16x9.jpg',
     sweet: true,
     gluten: true,
-    plural: false
+    plural: false,
+    investigateBreakage: true
   },
   {
     name : 'Bacon and Cheese Bread',
@@ -41,7 +43,8 @@ Recipe.find({}).remove(function() {
     img  : 'http://www.browneyedbaker.com/wp-content/uploads/2012/04/bacon-cheese-bread-1-550.jpg',
     sweet: false,
     gluten: true,
-    plural: false
+    plural: false,
+    investigateBreakage: false
   },
   {
     name: 'Carrot Cake',
@@ -49,6 +52,7 @@ Recipe.find({}).remove(function() {
     img: 'http://www.bbcgoodfood.com/sites/bbcgoodfood.com/files/recipe_images/recipe-image-legacy-id--1201555_11.jpg',
     sweet: true,
     gluten: false,
-    plural: false
+    plural: false,
+    investigateBreakage: false
   });
 });

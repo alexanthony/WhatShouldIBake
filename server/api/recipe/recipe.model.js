@@ -9,7 +9,8 @@ var RecipeSchema = new Schema({
   img: String,
   sweet: Boolean,
   gluten: Boolean,
-  plural: Boolean
+  plural: Boolean,
+  investigateBreakage: {type: Boolean, default: false}
 });
 
 module.exports = mongoose.model('Recipe', RecipeSchema);
