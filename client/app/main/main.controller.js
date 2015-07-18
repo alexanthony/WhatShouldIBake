@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('whatShouldIbakeApp')
-  .controller('MainCtrl', function ($scope, $http) {
+  .controller('MainCtrl', function ($scope, $http, recipes) {
     var getRecipes = function() {
-      $http.get('/api/recipes').success(function(recipes) {
-        $scope.recipes = recipes;
+      recipes.query(function(data) {
+        $scope.recipes = data;
       });
     };
 
@@ -35,6 +35,7 @@ angular.module('whatShouldIbakeApp')
     };
 
     $scope.toggleSweetSavoury = function() {
+      $scope.sweetSavoury = !$scope.recipe().sweet;
       getRecipes();
       recipeNumber = 0;
     };
