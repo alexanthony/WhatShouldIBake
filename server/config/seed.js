@@ -5,11 +5,11 @@
 
 'use strict';
 
-var Thing = require('../api/thing/thing.model');
+var Recipe = require('../api/recipe/recipe.model');
 
 
-Thing.find({}).remove(function() {
-  Thing.create({
+Recipe.find({}).remove(function() {
+  Recipe.create({
     name : 'Development Tools',
     info : 'Integration with popular tools such as Bower, Grunt, Karma, Mocha, JSHint, Node Inspector, Livereload, Protractor, Jade, Stylus, Sass, CoffeeScript, and Less.'
   }, {

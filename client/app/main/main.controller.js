@@ -4,7 +4,7 @@ angular.module('whatShouldIbakeApp')
   .controller('MainCtrl', function ($scope, $http) {
     $scope.awesomeThings = [];
 
-    $http.get('/api/things').success(function(awesomeThings) {
+    $http.get('/api/recipes').success(function(awesomeThings) {
       $scope.awesomeThings = awesomeThings;
     });
 
