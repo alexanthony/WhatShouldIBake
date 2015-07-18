@@ -15,8 +15,8 @@ angular.module('whatShouldIbakeApp')
       }
       recipes.query(recipeOptions, function(data) {
         $scope.recipes = data;
+        recipeNumber = 0;
       });
-      recipeNumber = 0;
     };
 
     $scope.recipes = [];
@@ -29,9 +29,10 @@ angular.module('whatShouldIbakeApp')
     };
 
     $scope.nextRecipe = function() {
-      recipeNumber++;
-      if (recipeNumber >= $scope.recipes.length) {
+      if (recipeNumber + 1 >= $scope.recipes.length) {
         getRecipes();
+      } else {
+        recipeNumber++;
       }
     };
 

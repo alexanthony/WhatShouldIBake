@@ -47,13 +47,17 @@ exports.index = function(req, res) {
   query.exec(function (err, recipes) {
     if(err) { return handleError(res, err); }
     var result = [];
+    var resultCount = 0;
     if (req.query.maxresults && req.query.maxresults < recipes.length) {
-      while (result.length < req.query.maxresults) {
-        var recipeToAddIndex = getRandomInt(0, recipes.length - 1);
-        result.push(recipes[recipeToAddIndex]);
-        recipes.splice(recipeToAddIndex, 1);
-      }
-    } else {result = recipes}
+      resultCount = req.query.maxresults;
+    } else {
+      resultCount = recipes.length;
+    }
+    while (result.length < resultCount) {
+      var recipeToAddIndex = getRandomInt(0, recipes.length - 1);
+      result.push(recipes[recipeToAddIndex]);
+      recipes.splice(recipeToAddIndex, 1);
+    }
     return res.status(200).json(result);
   });
 };

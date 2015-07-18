@@ -22,7 +22,7 @@ describe('Controller: MainCtrl', function () {
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope, _$q_) {
     $q = _$q_;
-    mockRecipeFactory.query = function(success) {
+    mockRecipeFactory.query = function(options, success) {
       success(mockRecipeResponse);
       return $q.when(mockRecipeResponse);
     };
