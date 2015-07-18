@@ -18,6 +18,21 @@ describe('GET /api/recipes', function() {
       });
   });
 
+  it('should not include items with investigateBreakage = true', function(done) {
+    request(app)
+      .get('/api/recipes')
+      .expect(200)
+      .expect('Content-Type', /json/)
+      .end(function(err, res) {
+        if (err) return done(err);
+        var recipes = res.body;
+        for (var i = 0; i < recipes.length; i++) {
+          recipes[i].investigateBreakage.should.be.exactly(false);
+        }
+        done();
+      });
+  });
+
   it('should only include sweet recipes when query asks for it', function(done) {
     request(app)
       .get('/api/recipes')
