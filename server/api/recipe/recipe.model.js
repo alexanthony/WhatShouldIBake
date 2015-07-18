@@ -5,8 +5,11 @@ var mongoose = require('mongoose'),
 
 var RecipeSchema = new Schema({
   name: String,
-  info: String,
-  active: Boolean
+  link: String,
+  img: String,
+  sweet: Boolean,
+  gluten: Boolean,
+  plural: Boolean
 });
 
 module.exports = mongoose.model('Recipe', RecipeSchema);

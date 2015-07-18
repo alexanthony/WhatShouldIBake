@@ -25,6 +25,22 @@
     border-top: 1px solid #E5E5E5;
 }
 
+a {
+    color: #ffffff;
+    &:hover {
+        color: #ffffff;
+    }
+    &:focus {
+        color: #ffffff;
+    }
+    &:active {
+        color: #fff;
+    }
+    &:visited {
+        color: #fff;
+    }
+}
+
 .header-link {
     @extend a;
     color: #ffffff;
@@ -34,6 +50,12 @@
     &:focus {
         color: #ffffff;
     }
+    &:active {
+        color: #fff;
+    }
+    &:visited {
+        color: #fff;
+    }
 }
 
 .link {
@@ -41,6 +63,15 @@
     text-align: center;
     font-size: 40px;
     &:hover {
+        color: #000;
+    }
+    &:focus {
+        color: #000;
+    }
+    &:active {
+        color: #000;
+    }
+    &:visited {
         color: #000;
     }
 }
@@ -52,6 +83,6 @@
 
 .little-link {
     @extend .link;
-    font-size: 28px;
+    font-size: 15px;
     margin-top: 20px;
 }
