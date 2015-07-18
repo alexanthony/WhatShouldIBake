@@ -13,9 +13,19 @@ angular.module('whatShouldIbakeApp')
       } else if ($scope.sweetSavoury === false) {
         recipeOptions.sweet = false;
       }
+      // Save off the old id so we can make sure we definitely change
+      
+      var lastRecipeId;
+      if ($scope.recipes.length > 0) {
+        lastRecipeId = $scope.recipes[recipeNumber]._id;
+      }
       recipes.query(recipeOptions, function(data) {
+        if (data.length > 0 && data[0]._id === lastRecipeId) {
+          recipeNumber = 1;
+        } else {
+          recipeNumber = 0;
+        }
         $scope.recipes = data;
-        recipeNumber = 0;
       });
     };
 
