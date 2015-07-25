@@ -17,10 +17,8 @@ header#banner.hero-unit
 footer.footer
   .container
     p
-      | {{rude ? 'WTFSHIB' : 'WSHIB'}}
-      = ' | '
-      | Alex Anthony
-      = ' | '
-      a(href='', ng-click='markAsBroken()').little-link The link doesn't{{rude ? ' fucking' : ''}} work
-      = ' | '
-      a(ng-click='toggleRude()').little-link Be {{rude ? 'more polite' : 'ruder'}}
+      span {{rude ? 'WTFSHIB' : 'WSHIB'}}  |  Alex Anthony  | 
+      span
+        a(href='', ng-click='markAsBroken()').little-link    The link doesn't{{rude ? ' fucking' : ''}} work
+        |   |  
+        a(ng-click='toggleRude()').little-link Be {{rude ? 'more polite' : 'ruder'}}
