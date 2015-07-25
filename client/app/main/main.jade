@@ -8,10 +8,10 @@ header#banner.hero-unit
 
 .container
   .row
-    a(ng-click='nextRecipe()', href='').col-lg-12.big-link {{rude ? 'That looks shit' : 'Show me something else'}}
+    a(ng-click='nextRecipe()', href='').col-lg-12.col-xs-12.big-link {{rude ? 'That looks shit' : 'Show me something else'}}
   .row
-    a(href='', ng-click='toggleSweetSavoury()').col-lg-6.col-sm-12.link Something{{rude ? ' fucking' : ''}} {{recipe().sweet ? 'savoury' : 'sweet'}}
-    a(href='', ng-click='toggleGlutenFree()').col-lg-6.col-sm-12.link {{glutenFree ? (rude ? 'Give me fucking gluten' : 'Gluten is OK') : (rude ? 'No fucking gluten' : 'Something without gluten')}}
+    a(href='', ng-click='toggleSweetSavoury()').col-lg-6.col-xs-12.col-md-6.link Something{{rude ? ' fucking' : ''}} {{recipe().sweet ? 'savoury' : 'sweet'}}
+    a(href='', ng-click='toggleGlutenFree()').col-lg-6.col-xs-12.col-md-6.link {{glutenFree ? (rude ? 'Give me fucking gluten' : 'Gluten is OK') : (rude ? 'No fucking gluten' : 'Something without gluten')}}
 
 
 footer.footer
