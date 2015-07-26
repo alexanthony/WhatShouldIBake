@@ -4,7 +4,7 @@ header#banner.hero-unit
     a(ng-href='{{recipe().link}}')
       div
         h1.header-link {{recipe().name}}
-        img(ng-src='{{recipe().img}}').img-responsive.center-block
+        img(image-src='{{recipe().img}}', loading-src='assets/images/ajax-loader.gif').img-responsive.center-block
 
 .container
   .row
