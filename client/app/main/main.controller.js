@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('whatShouldIbakeApp')
-  .controller('MainCtrl', function ($scope, $http, recipes, $location) {
+  .controller('MainCtrl', function ($scope, $http, recipes, $location, $document) {
     var recipeNumber = 0;
     var getRecipes = function() {
       var recipeOptions = {
@@ -33,6 +33,13 @@ angular.module('whatShouldIbakeApp')
     $scope.glutenFree = false;
 
     getRecipes();
+    var setTitle = function() {
+      if ($scope.rude) {
+        $document[0].title = 'What The Fuck Should I Bake?';
+      } else {
+        $document[0].title = 'What Should I Bake?';
+      }
+    };
 
     $scope.recipe = function() {
       return $scope.recipes[recipeNumber];
@@ -47,11 +54,8 @@ angular.module('whatShouldIbakeApp')
     };
 
     $scope.toggleRude = function() {
-      if ($scope.rude) {
-        $scope.rude = false;
-      } else {
-        $scope.rude = true;
-      }
+      $scope.rude = !$scope.rude;
+      setTitle();
     };
 
     $scope.toggleSweetSavoury = function() {
@@ -74,4 +78,6 @@ angular.module('whatShouldIbakeApp')
     } else {
       $scope.rude = false;
     }
+
+    setTitle();
   });
