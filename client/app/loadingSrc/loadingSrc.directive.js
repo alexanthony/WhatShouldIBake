@@ -12,9 +12,14 @@ angular.module('whatShouldIbakeApp')
         element[0].src = loadingImgSrc;
 
         attr.$observe('imageSrc', function(value) {
+          // Clear the old image instantly
+          element[0].src = '';
+          // Set loading image while we wait
           element[0].src = loadingImgSrc;
+          // Load up new image
           var img = new Image();
           img.src = value;
+          // Once image is loaded, replace displayed image with this one
           img.onload = function () {
               img.onload = null;
               if (element[0].src !== img.src) {
