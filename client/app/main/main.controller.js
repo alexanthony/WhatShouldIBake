@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('whatShouldIbakeApp')
-  .controller('MainCtrl', function ($scope, $http, recipes) {
+  .controller('MainCtrl', function ($scope, $http, recipes, $location) {
     var recipeNumber = 0;
     var getRecipes = function() {
       var recipeOptions = {
@@ -20,7 +20,7 @@ angular.module('whatShouldIbakeApp')
         lastRecipeId = $scope.recipes[recipeNumber]._id;
       }
       recipes.query(recipeOptions, function(data) {
-        if (data.length > 0 && data[0]._id === lastRecipeId) {
+        if (data.length > 1 && data[0]._id === lastRecipeId) {
           recipeNumber = 1;
         } else {
           recipeNumber = 0;
@@ -69,5 +69,9 @@ angular.module('whatShouldIbakeApp')
       getRecipes();
     };
 
-    $scope.rude = true;
+    if ($location.absUrl().indexOf('wtf') > -1 || $location.absUrl().indexOf('fuck') > -1) {
+      $scope.rude = true;
+    } else {
+      $scope.rude = false;
+    }
   });
