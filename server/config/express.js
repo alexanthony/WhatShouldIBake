@@ -25,6 +25,7 @@ module.exports = function(app) {
   app.use(bodyParser.json());
   app.use(methodOverride());
   app.use(cookieParser());
+  app.use(require('prerender-node').set('prerenderToken', '5D7ByL4PC5miPKybErpn'));
   
   if ('production' === env) {
     app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));

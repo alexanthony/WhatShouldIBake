@@ -33,6 +33,7 @@ angular.module('whatShouldIbakeApp')
               if (element[0].src !== img.src) {
                 element[0].src = img.src;
                 element[0].style.height = 'auto';
+                window.prerenderReady = true;
               }
           };
         });
